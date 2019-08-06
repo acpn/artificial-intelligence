@@ -32,7 +32,25 @@ location_to_state = {
 actions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 #     Step 3 - Defining the Rewards
-
+R = np.array([[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+              [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+              [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+              [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+              [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1],
+              [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+              [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+              [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0]
+              ])
 
 # Part 2 - Building the A.I solution with Q-Learning
+
+#     Step 1 - Initializing the Q-Values
+Q = np.array(np.zeros([12, 12]))
+
+#     Step 2 - Implementing the Q-Learning process
+
 # Part 3 - Going to Production
