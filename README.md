@@ -1,7 +1,7 @@
 # qlearn
 Q-Learning Implementations based on Udemy Artificial Intelligence for Business course.
 
-Part 01
+Part 01:
 1 - A autonomous warehouse case of study
     1.1 - Undertanding the environment
     1.2 - Undertanding the behind the scenes of Q-Learn algorithm
