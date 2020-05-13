@@ -49,7 +49,8 @@ R = np.array([[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 # Part 2 - Building the A.I solution with Q-Learning
 
 # Making a mapping from the states to the locations
-state_to_location = {state: location for location, state in location_to_state.items()}
+state_to_location = {state: location for location, state in \
+    location_to_state.items()}
 
 # Making the final function that will return the optimal route
 def route(starting_location, ending_location):
@@ -66,7 +67,8 @@ def route(starting_location, ending_location):
             if R_new[current_state, j] > 0:
                 playable_actions.append(j)
         next_state = np.random.choice(playable_actions) 
-        TD = R_new[current_state, next_state] + gamma * Q[next_state, np.argmax(Q[next_state,])] - Q[current_state, next_state] 
+        TD = R_new[current_state, next_state] + gamma * Q[next_state, \
+            np.argmax(Q[next_state,])] - Q[current_state, next_state] 
         Q[current_state, next_state] += alpha * TD
 
     route = [starting_location]
@@ -83,8 +85,10 @@ def route(starting_location, ending_location):
 
     return route
 
-def best_route(starting_location, intermediary_location, ending_location):
-    return route(starting_location, intermediary_location) + route(intermediary_location, ending_location)[1:] # avoid duplicate location
+def best_route(starting_location, intermediary_location, ending_location):.
+    # avoid duplicate location
+    return route(starting_location, intermediary_location) + \
+        route(intermediary_location, ending_location)[1:] 
 
 print("Route:")
 print(best_route('E', 'F', 'G'))
